@@ -1,0 +1,43 @@
+name: coincap_testapp
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  dio: ^5.5.0
+  get_it: ^7.7.0
+  injectable: ^2.4.2
+  flutter_bloc: ^8.1.6
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.9
+  injectable_generator: ^2.6.2
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: SF Pro Text
+      fonts:
+        - asset: assets/fonts/SF-Pro-Text-Regular.otf
+          weight: 400
+        - asset: assets/fonts/SF-Pro-Text-Medium.otf
+          weight: 500
+        - asset: assets/fonts/SF-Pro-Text-Semibold.otf
+          weight: 600
+        - asset: assets/fonts/SF-Pro-Text-Bold.otf
+          weight: 700

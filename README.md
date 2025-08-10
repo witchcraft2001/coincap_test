@@ -19,7 +19,7 @@ flutter packages pub run build_runner build --delete-conflicting-outputs
 
 Create local file in the root of project with name `.env.json`. Example:
 
-```json`
+```json
 {
 "COINCAP_API_KEY": "api-key"
 }

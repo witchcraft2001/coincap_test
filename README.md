@@ -1,16 +1,32 @@
 # coincap_testapp
 
-A new Flutter project.
+Test application for CoinCap API.
 
-## Getting Started
+![mainscreen](./screenshots/Screenshot.png)
 
-This project is a starting point for a Flutter application.
+## Generate files
 
-A few resources to get you started if this is your first Flutter project:
+### Injections and `json_serializable`-models:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+After adding some new injectable or injecting class need to regenerate file injection.config.dart,
+for this do next tasks: update pubspec dependencies and
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```sh
+flutter packages pub run build_runner build --delete-conflicting-outputs
+```
+
+### API keys
+
+Create local file in the root of project with name `.env.json`. Example:
+
+```json`
+{
+"COINCAP_API_KEY": "api-key"
+}
+```
+
+Change `api-key` to your CoinCap API key. Add this file to environment variables on building project:
+
+```sh
+flutter run --dart-define-from-file=.env.json
+```
